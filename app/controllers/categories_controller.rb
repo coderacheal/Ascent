@@ -1,5 +1,4 @@
 class CategoriesController < ApplicationController
-
   def index
     @all_categories = current_user.categories.includes(:expenses)
     @category_total_amounts = {}
@@ -9,7 +8,6 @@ class CategoriesController < ApplicationController
       @category_total_amounts[category] = total_amount
     end
   end
-  
 
   def new
     @category = Category.new
