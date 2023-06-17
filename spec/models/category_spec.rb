@@ -6,7 +6,6 @@ RSpec.describe Category, type: :model do
     @category = Category.create(name: 'Travel', user_id: @user.id)
   end
 
-
   describe 'Association' do
     it 'should belong to a user' do
       expect(@category.user_id).to eq(@user.id)
