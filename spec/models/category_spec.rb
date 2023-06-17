@@ -13,8 +13,8 @@ RSpec.describe Category, type: :model do
     end
 
     it 'should have many expenses' do
-      t = Category.reflect_on_association(:expenses)
-      expect(t.macro).to eq(:has_and_belongs_to_many)
+      relation = Category.reflect_on_association(:expenses)
+      expect(relation.macro).to eq(:has_and_belongs_to_many)
     end
   end
 

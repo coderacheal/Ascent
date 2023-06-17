@@ -33,13 +33,9 @@ RSpec.describe Expense, type: :model do
       expect(@expense.author_id).to eq(@user.id)
     end
 
-    # it 'should belong to a category' do
-    #   expect(@expense.category_id).to eq(@user.id)
-    # end
-
     it 'should belong to a category' do
-      t = Expense.reflect_on_association(:categories)
-      expect(t.macro).to eq(:has_and_belongs_to_many)
+      relation = Expense.reflect_on_association(:categories)
+      expect(relation.macro).to eq(:has_and_belongs_to_many)
     end
   end
 end

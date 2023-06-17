@@ -19,13 +19,13 @@ RSpec.describe User, type: :model do
 
   describe 'Association' do
     it 'should have many expenses' do
-      t = User.reflect_on_association(:expenses)
-      expect(t.macro).to eq(:has_many)
+      relation = User.reflect_on_association(:expenses)
+      expect(relation.macro).to eq(:has_many)
     end
 
     it 'should have many games' do
-      t = User.reflect_on_association(:games)
-      expect(t.macro).to eq(:has_many)
+      relation = User.reflect_on_association(:categories)
+      expect(relation.macro).to eq(:has_many)
     end
   end
 end
