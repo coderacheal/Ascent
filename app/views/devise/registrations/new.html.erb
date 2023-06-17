@@ -1,5 +1,5 @@
 <main>
-  <%= render partial: 'shared/pre_login' %>
+  <%= render partial: 'shared/pre_signup' %>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
@@ -19,7 +19,7 @@
 
         <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Confirm password', class: "field"  %>
 
-        <%# <%= f.submit "Sign up", class: 'login_button' %> 
+        <%= f.submit "Sign up", class: 'login_button' %>
 
       </div>
     <% end %>

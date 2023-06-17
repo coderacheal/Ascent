@@ -1,8 +1,9 @@
 <main>
-  <%= render partial: 'shared/navigation' %>
-  <h2 class='login_ribbon'>Log in</h2>
+  <%= render partial: 'shared/pre_login' %>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
     <div class='login_container'>
       <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: "field" %>
