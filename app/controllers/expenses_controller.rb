@@ -2,6 +2,7 @@ class ExpensesController < ApplicationController
   before_action :set_category, only: %i[index new create]
 
   def index
+    @category_expenses = Expense.where(category_id: params[:category_id])
     @expenses = @category.expenses.includes(:user).order(created_at: :desc)
     @total_amount = @expenses.sum(:amount)
   end
