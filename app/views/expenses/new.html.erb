@@ -10,9 +10,13 @@
         <div>
           <%= form.number_field :amount, class: 'field expense-field', placeholder: 'Amount ($)' %> <br>
         </div>
+
+        <%= form.collection_select :game_id, Category.where(user_id: current_user.id), :id, :name, class: "form-control" %>
+        
         <div>
           <%= form.submit 'Add Expense', class: 'expense-field save_category_btn' %>
         </div>
+        
       </div>
   <% end %>
 </main>

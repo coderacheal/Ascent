@@ -1,7 +1,6 @@
 <main>
   <%= render partial: 'shared/navigation' %>
   <div class='new_category_form'>
-    <%= link_to 'Back', categories_path%>
     <h3 class='new_action_cat_ribbon'>Add Category</h3>
     <%= form_with model: @category, url: categories_path(current_user.id), method: :post, local: true do |form| %>
       <div class="add-form">

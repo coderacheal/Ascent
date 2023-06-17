@@ -1,8 +1,6 @@
 <main>
   <%= render partial: 'shared/navigation' %>
 
-  <%= link_to 'Back', root_path%>
-
 <div class='add_categories_div'>
   <% @category_total_amounts.each do |category, total_amount| %>
     <div class='category-card'>
@@ -23,7 +21,7 @@
 </div>
  
 
-  <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: "sign-out"%> 
+  <%# <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: "sign-out"%> 
   <%= button_to 'Add category', new_category_path, method: :get, class: 'add_category_btn' %>
 </main>
 
