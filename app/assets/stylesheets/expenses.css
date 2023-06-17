@@ -1,0 +1,45 @@
+.expense-ribbon {
+  text-align: center;
+}
+
+.expense-field {
+  margin-bottom: 20px;
+}
+
+
+.expense-inputs div {
+  width: 95%;
+  margin: auto;
+  /* display: flex; */
+  /* flex-direction: column; */
+  margin-bottom: 20px;
+}
+
+.expense-card {
+  background-color: rgb(255, 255, 255);
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.expense-card div {
+  display: flex;
+}
+.total-amount {
+  text-align: right;
+  margin-right: 5%;
+}
+
+.expense-name-amout {
+  display: flex;
+  justify-content: space-around;
+}
+
+.expense-date {
+  margin: 0;
+  text-align: right;
+  margin-right: 20px;
+  font-size: 15px;
+  color: black;
+  opacity: 0.5;
+}
