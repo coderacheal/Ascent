@@ -1,0 +1,23 @@
+header {
+  background-color: #3778c2;
+  height: 55px;
+  margin-top: 0;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  text-align: center;
+  padding-top: 25px;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
