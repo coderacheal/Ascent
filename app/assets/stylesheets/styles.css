@@ -1,3 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+main {
+  width: 320px;
+  height: 100vh; 
+  background-color: pink;
+}
+
+.logo {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  top: 40vh;
+  font-family: Monteserrat, san-serif;
+  font-size: 40px;
+}
+
+.login_signup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  margin-top: 60vh;
+  gap: 25px;
+}
+
+.session  {
+  width: 90%;
+  padding: 15px 0;
+  margin: auto;
+  background-color: #3778c2;
+  text-align: center;
+}
+
+.register {
+  background-color: white;
+}
+
+.session_text_login {
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.session_text_signup {
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  color: #434b54;
+  font-family: 'Roboto', sans-serif;
+}
+
+
 .category-image {
   height: 50px;
   width: 50px;
