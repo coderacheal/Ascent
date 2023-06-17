@@ -3,4 +3,6 @@ class Expense < ApplicationRecord
   has_and_belongs_to_many :categories
 
   validates :name, :amount, presence: true
+
+  validates :name, length: { maximum: 50 }
 end
