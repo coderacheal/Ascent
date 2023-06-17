@@ -1,0 +1,17 @@
+<header>
+    <nav class="nav">
+      <p><%= link_to '<<', categories_path , class: 'back-sign'%></p>
+      <div class="name-image-div">
+        <% if current_user %>
+          <% if current_user.image.attached? %>
+            <%= image_tag current_user.image, class: "profile" %> 
+          <% end %>
+          <div>
+            <p class="username"><%= current_user.name %></p>
+            <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: "nav-sign-out" %>
+          </div>
+        <% end %>
+      </div>
+      
+    </nav>
+</header>

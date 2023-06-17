@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :categories
   has_many :expenses, foreign_key: :author_id
+  has_one_attached :image
 
   validates :name, length: { maximum: 50 }
 end

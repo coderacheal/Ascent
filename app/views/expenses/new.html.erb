@@ -1,13 +1,26 @@
-<h1>Add Expense</h1>
-<%= link_to 'Back', categories_path%>
-<%= form_with(model: @expense, url: category_expenses_path(user_id: current_user.id, category_id: @category.id), local: true) do |form| %>
-  <div class="form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= form.label :amount %>
-    <%= form.number_field :amount, class: 'form-control' %>
-  </div>
-  <%= form.submit 'Add Expense', class: 'btn btn-primary' %>
-<% end %>
+<main>
+  <%= render partial: 'shared/navigation' %>
+  
+
+  <%= form_with(model: @expense, url: category_expenses_path(user_id: current_user.id, category_id: @category.id), local: true) do |form| %>
+      <h3 class='new-expense-ribbon'>Add Expense</h3>
+      <div class='expense-inputs'>
+        <div>
+          <%= form.text_field :name, class: 'field expense-field', placeholder: 'Expense name' %>
+        </div>
+        <div>
+          <%= form.number_field :amount, class: 'field expense-field', placeholder: 'Amount ($)' %> <br>
+        </div>
+
+        <div>
+          <%= form.collection_select :category_id, Category.where(user_id: current_user.id), :id, :name, class: 'field expense-field selection' %>
+        </div>
+        
+        <div>
+          <%= form.submit 'Add Expense', class: 'expense-field save_category_btn' %>
+        </div>
+        
+      </div>
+  <% end %>
+</main>
+
