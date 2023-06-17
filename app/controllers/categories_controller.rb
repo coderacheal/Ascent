@@ -28,7 +28,11 @@ class CategoriesController < ApplicationController
     redirect_to categories_path
   end
 
+  
+
   private
+
+ 
 
   def category_params
     params.require(:category).permit(:name, :image)
