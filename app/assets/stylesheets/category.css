@@ -1,6 +1,7 @@
 .add_categories_div, .new_category_form {
-  height: 65vh;
+  height: 58vh;
   overflow: auto;
+  margin-top: 10px;
 }
 
 .category-card {
@@ -45,13 +46,11 @@
   padding: 15px;
   border: 0;
   background-color: #5fb523;
-  width: 99%;
+  width: 100%;
   margin: auto;
-  margin-top: 18vh;
+  margin-top: 22vh;
   color: white;
   font-size: 18px;
-
-
 
 }
 
@@ -69,9 +68,24 @@
   display: left;
   justify-content: flex-end;
   margin-left: 60%;
+  
 }
 
 /* new action */
+
+.category-transaction {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: rgb(238, 253, 255);
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.category-and-total-amount {
+  display: flex;
+}
 
 .new_category_form {
   width: 90;

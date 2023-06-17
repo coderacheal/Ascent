@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+.new-expense-ribbon {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
 .expense-field {
   margin-bottom: 20px;
 }
@@ -10,8 +16,6 @@
 .expense-inputs div {
   width: 95%;
   margin: auto;
-  /* display: flex; */
-  /* flex-direction: column; */
   margin-bottom: 20px;
 }
 
@@ -19,7 +23,8 @@
   background-color: rgb(255, 255, 255);
   width: 90%;
   margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 8px;
 }
 
 .expense-card div {
@@ -52,7 +57,12 @@
   background-color: #5fb523;
   width: 99%;
   margin: auto;
-  margin-top: 2vh;
+  margin-top: 6vh;
   color: white;
   font-size: 18px;
 }
+
+.selection {
+  margin-left: 20%;
+}
+

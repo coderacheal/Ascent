@@ -1,8 +1,15 @@
 <main>
   <%= render partial: 'shared/navigation' %> 
-  <h3 class='expense-ribbon'>Transactions</h3>
 
-  <p class='total-amount'>Total Amount: <%= number_to_currency(@total_amount) %> </p> 
+  <div class='category-transaction'>
+    <p><%= image_tag @category.image, class: 'category-image' %></p>
+    <div>
+      <div class='category-and-total-amount'>
+        <p class='total-amount'><%= category_name = @category.name %> </p> 
+        <p class='total-amount'>Total Amount: <%= number_to_currency(@total_amount) %> </p> 
+      </div>
+    </div>
+  </div>
 
   <div class='add_categories_div'>
     <% @expenses.each do |expense| %>

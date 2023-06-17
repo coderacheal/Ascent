@@ -19,5 +19,21 @@
 
 .login_button {
   width: 30%;
-  padding: 7px;
+  margin: auto;
+  padding: 10px;
+  background-color: #5fb523;
+  border: 0;
+  color: white;
+  margin-top: 15px;
+  
+}
+
+.forgot {
+  width: 80%;
+  margin: auto;
+  color: #434b54;
+  text-align: center;
+  opacity: 0.5;
+  text-decoration: none;
+  margin-left: 25%;
 }
