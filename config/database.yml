@@ -85,6 +85,4 @@ test:
 #
 production:
   <<: *default
-  database: cent_production
-  username: cent
-  password: <%= ENV["CENT_DATABASE_PASSWORD"] %>
+   url: <%= ENV['DATABASE_URL'] %>
