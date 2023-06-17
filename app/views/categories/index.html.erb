@@ -7,6 +7,8 @@
   <p><%= link_to category.name, category_expenses_path(category_id: category.id) %> </p>
     <%= image_tag category.image, class: 'category-image' if category.image.attached? %>
     <p>Total Amount: <%= total_amount %></p>
+    <%= button_to 'Delete', category_path(category), method: :delete, class: 'ingredient-delete-btn' %>
+
 <% end %>
 
 </ul>
