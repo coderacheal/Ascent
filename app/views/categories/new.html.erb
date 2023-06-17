@@ -1,23 +1,27 @@
 <main>
   <%= render partial: 'shared/navigation' %>
 
-  <h1>ADD Category</h1>
   
+<div class='new_category_form'>
   <%= link_to 'Back', categories_path%>
+  <h3 class='new_action_cat_ribbon'>Add Category</h3>
   <%= form_with model: @category, url: categories_path(current_user.id), method: :post, local: true do |form| %>
     <div class="add-form">
       <div>
-        <%= form.label :name %><br>
-        <%= form.text_field :name, class: 'name-input' %><br>
+        <%= form.text_field :name, class: 'field new-category', placeholder: 'Name of Category' %><br>
       </div>
       <div>
-        <%= form.label :image %><br>
-        <%= form.file_field :image, class: 'image-input' %><br>
+        <%= form.label :image, class: 'new-category' %><br>
+        <%= form.file_field :image, class: 'field ' %><br>
       </div>
       <br>
-      <%= form.submit 'Save', class: 'post-button' %>
+      <div>
+        <%= form.submit 'Save', class: 'save_category_btn' %>
+      <div>
     </div>
   <% end %>
+</div>
+  
 </main>
 
 

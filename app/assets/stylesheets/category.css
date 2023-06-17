@@ -1,4 +1,4 @@
-.add_categories_div {
+.add_categories_div, .new_category_form {
   height: 65vh;
   overflow: auto;
 }
@@ -69,4 +69,46 @@
   display: left;
   justify-content: flex-end;
   margin-left: 60%;
+}
+
+/* new action */
+
+.new_category_form {
+  width: 90;
+  margin: auto;
+}
+
+.new_action_cat_ribbon {
+  text-align: center;
+}
+
+.save_category_btn {
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  border: 0;
+  background-color: #5fb523;
+  width: 50%;
+  margin: auto;
+  /* margin-top: 3vh; */
+  color: white;
+  font-size: 18px;
+  align-self: center;
+}
+
+.new-category {
+  font-size: 18px;
+}
+
+.add-form div {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 30px;
+  
+}
+.add-form div .save_category_btn {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 30px;
+  
 }
