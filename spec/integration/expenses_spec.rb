@@ -3,22 +3,21 @@ require 'devise'
 
 RSpec.describe 'Expenses', type: :feature do
   let(:user) { create(:user) }
-  let(:category) { create(:category, user: user) }
+  let(:category) { create(:category, user:) }
 
   before do
     login_as(user, scope: :user)
   end
 
   scenario 'user views expenses of a category' do
-    expense1 = create(:expense, categories: [category], user: user)
-    expense2 = create(:expense, categories: [category], user: user)
+    expense1 = create(:expense, categories: [category], user:)
+    expense2 = create(:expense, categories: [category], user:)
 
     visit category_expenses_path(category)
 
     expect(page).to have_content(expense1.name)
     expect(page).to have_content(expense2.name)
-    expect(page).to have_content('Total Amount: 20') 
-
+    expect(page).to have_content('Total Amount: 20')
   end
 
   scenario 'user creates a new expense' do
@@ -30,6 +29,5 @@ RSpec.describe 'Expenses', type: :feature do
     click_button 'Add Expense'
 
     expect(current_path).to eql category_expenses_path(category_id: category.id)
-
   end
 end

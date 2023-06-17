@@ -9,16 +9,16 @@ RSpec.describe 'Categories', type: :feature do
   end
 
   scenario 'user views all categories and their total amounts' do
-    category1 = create(:category, user: user)
-    category2 = create(:category, user: user)
-    expense1 = create(:expense, categories: [category1], user: user)
-    expense2 = create(:expense, categories: [category2], user: user)
+    category1 = create(:category, user:)
+    category2 = create(:category, user:)
+    create(:expense, categories: [category1], user:)
+    create(:expense, categories: [category2], user:)
 
     visit categories_path
 
     expect(page).to have_content(category1.name)
     expect(page).to have_content(category2.name)
-    expect(page).to have_content('Total Amount: 10') 
+    expect(page).to have_content('Total Amount: 10')
   end
 
   scenario 'user creates a new category' do
