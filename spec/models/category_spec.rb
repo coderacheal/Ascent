@@ -6,6 +6,18 @@ RSpec.describe Category, type: :model do
     @category = Category.create(name: 'Travel', user_id: @user.id)
   end
 
+  
+  describe 'Association' do
+    it 'should belong to a user' do
+      expect(@category.user_id).to eq(@user.id)
+    end
+
+    it 'should have many expenses' do
+      t = Category.reflect_on_association(:expenses)
+      expect(t.macro).to eq(:has_and_belongs_to_many)
+    end
+  end
+
   describe 'Validation' do
     it 'should validate the presence of a name' do
       @category.name = nil
@@ -13,19 +25,9 @@ RSpec.describe Category, type: :model do
     end
 
     it 'should validate the length of the name' do
-      @category.name = 'a' * 51
+      @category.name = 'Ama' * 19
       expect(@category).to_not be_valid
     end
   end
 
-  describe 'Association' do
-    it 'should belong to a user' do
-      expect(@category.user_id).to eq(@user.id)
-    end
-
-    it 'should have many expenses' do
-      t = Game.reflect_on_association(:expenses)
-      expect(t.macro).to eq(:has_many)
-    end
-  end
 end

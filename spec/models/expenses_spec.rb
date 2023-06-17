@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Expense, type: :model do
   before :all do
     @user = User.create(name: 'Racheal Amma')
-    @expense = Expense.create(name: 'Studio lights', amount: 13, author_id: @user.id, category_id: 1)
+    @expense = Expense.create(name: 'Studio lights', amount: 13, author_id: @user.id)
   end
 
   describe 'validations' do
@@ -23,18 +23,23 @@ RSpec.describe Expense, type: :model do
     end
 
     it 'should validate the amount is a number' do
-      @expense.amount = 'a'
+      @expense.amount = '10'
       expect(@expense).to_not be_valid
     end
   end
 
   describe 'associations' do
     it 'should belong to a user' do
-      expect(@expense.user_id).to eq(@user.id)
+      expect(@expense.author_id).to eq(@user.id)
     end
 
-    it 'should belong to a games' do
-      expect(@expense.game_id).to eq(5)
+    # it 'should belong to a category' do
+    #   expect(@expense.category_id).to eq(@user.id)
+    # end
+
+    it 'should belong to a category' do
+      t = Expense.reflect_on_association(:categories)
+      expect(t.macro).to eq(:has_and_belongs_to_many)
     end
   end
 end
