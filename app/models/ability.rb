@@ -1,11 +1,8 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
   def initialize(user)
-
-    user ||= User.new # Guest user
+    user || User.new # Guest user
 
     can :manage, :all
     # Define abilities for the user here. For example:
