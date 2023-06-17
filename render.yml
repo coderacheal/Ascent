@@ -1,5 +1,5 @@
 databases:
-  - name: cent
+  -name: cent
     databaseName: cent
     user: cent_user
 
