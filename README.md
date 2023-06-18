@@ -38,13 +38,39 @@
 
 ## 📌 Tech Stack <a name="tech-stack"></a>
 
-| Domain | Tech Stack |
-|--------|--------|
-| Server | <a href="https://rubyonrails.org/">Ruby on Rails</a> |
-| Database | <a href="https://www.postgresql.org/">PostgreSQL</a> |
-| Testing Framework | <a href="https://github.com/rspec/rspec-rails">RSpec Rails,</a> <a href="https://rubydoc.info/github/teamcapybara/capybara">Capybara</a> |
-| Authentification | <a href="https://github.com/heartcombo/devise#getting-started">Devise</a> |
-| Authorization | <a href="https://github.com/CanCanCommunity/cancancan#installation">cancancan</a> | 
+<details>
+  <summary>Server</summary>
+<ul>
+  <li><a href="https://rubyonrails.org/">Rails</a></li>
+</ul>
+</details> 
+<details>
+  <summary>Database</summary>
+<ul>
+  <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+</ul>
+</details>
+
+<details>
+  <summary>Testing Library</summary>
+<ul>
+  <li><a href="https://github.com/rspec/rspec-rails">RSpec</a></li>
+</ul>
+</details> 
+
+<details>
+  <summary>Authentication</summary>
+<ul>
+  <li><a href="https://github.com/heartcombo/devise#getting-started">Devise</a></li>
+</ul>
+</details>
+
+<details>
+  <summary>Authorization</summary>
+<ul>
+  <li><a href="https://github.com/CanCanCommunity/cancancan#installation">CanCanCan</a></li>
+</ul>
+</details>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- Features -->
