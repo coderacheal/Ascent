@@ -64,3 +64,24 @@ main {
   height: 50px;
   width: 50px;
 }
+
+.details_of_user {
+  display: flex;
+}
+
+.username {
+  font-size: 14px;
+  text-align: center;
+}
+
+.cat_img div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media (min-width: 320px) and (max-width: 426px) {
+  main {
+    width: 100%;
+  }
+}

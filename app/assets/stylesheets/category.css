@@ -19,6 +19,12 @@
   margin: auto;
 }
 
+.avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
 .category-image {
   margin-left: 4px;
 }
@@ -41,14 +47,14 @@
 }
 
 .add_category_btn {
-  bottom: 0;
+  position: absolute;
+  bottom: 2vh;
   left: 0;
   padding: 15px;
   border: 0;
   background-color: #5fb523;
   width: 100%;
   margin: auto;
-  margin-top: 22vh;
   color: white;
   font-size: 18px;
 }

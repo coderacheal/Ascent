@@ -8,10 +8,10 @@
 
         <%= f.text_field :name, autofocus: true, placeholder: 'Full name', class: "field expense-field"  %>
 
-      <div class="field">
-      <%= f.label :profile_photo %><br />
-      <%= f.file_field :profile_photo %>
-      </div>
+        <div class="field">
+            <%= f.label 'Profile Picture' %><br />
+            <%= f.file_field :image, placeholder: 'Avatar', class: 'session-form-input' %>
+        </div>
       
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: "field expense-field" %>
 
