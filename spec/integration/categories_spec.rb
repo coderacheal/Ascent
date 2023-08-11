@@ -14,14 +14,14 @@ RSpec.describe 'Category Feature', type: :feature do
     # current_user = @user_one
     @category_one = Category.create(name: 'Groceries', user_id: @user_one.id)
 
-    @category_two = Category.create(name: 'Investement', user_id: @user_one.id)
+    @category_two = Category.create(name: 'Investment', user_id: @user_one.id)
 
    
     # Attach an image to the @category_one instance
     image_path = Rails.root.join('spec', 'fixtures', 'files', 'profile.png')
     @category_one.image.attach(io: File.open(image_path), filename: 'profile.png', content_type: 'image/png')
   
-    @expense_one = Expense.create(name: 'Bodyshop cream', amount: 25, author_id: @user_one.id)
+    @expense_one = Expense.create(name: 'Olive Oil', amount: 25, author_id: @user_one.id)
 
     # Associate the Expense with the Category
     @category_one.expenses << @expense_one
@@ -43,7 +43,7 @@ RSpec.describe 'Category Feature', type: :feature do
 
     it 'contains total amount of transactions' do
       visit categories_path
-      expect(page).to have_content('Investement')
+      expect(page).to have_content('Investment')
     end
 
     it 'contains total of transactions' do

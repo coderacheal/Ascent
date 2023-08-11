@@ -3,12 +3,8 @@ Rails.application.routes.draw do
   get 'categories/index'
   get 'home/index'
 
-  # root to: 'home#index'
-
-
   get '/home', to: 'home#index'
   
-
   
   resources :categories do
     resources :expenses
