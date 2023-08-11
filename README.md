@@ -95,7 +95,7 @@
 
 👉 [Live Demo](https://save-sense.onrender.com/)<br>
 
-👉 [Video Walkthrough]()
+👉 [Video Walkthrough](https://www.loom.com/share/e1468e67e5da47fa8b1c69e043f7ff43?sid=d773af91-3706-47fc-8dd4-292dd451c8ce)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
