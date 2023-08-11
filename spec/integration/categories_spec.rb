@@ -15,7 +15,6 @@ RSpec.describe 'Category Feature', type: :feature do
 
     @category_two = Category.create(name: 'Investment', user_id: @user_one.id)
 
-
     # Attach an image to the @category_one instance
     image_path = Rails.root.join('spec', 'fixtures', 'files', 'profile.png')
     @category_one.image.attach(io: File.open(image_path), filename: 'profile.png', content_type: 'image/png')
