@@ -1,0 +1,22 @@
+<header>
+    <nav class="nav">
+      <p><%= link_to '<<', categories_path , class: 'back-sign'%></p>
+      <div class="name-image-div">
+          <div class='details_of_user'>
+            <div class='cat_img'>
+              <div>
+                <p class="username"><%= current_user.name %></p>
+                <% if user_signed_in? %>
+                  <% if current_user.image.attached? %>
+                    <%= image_tag(current_user.image, class: "avatar") %>
+                  <% else %>
+                    <%= image_tag("profile.png", class: "avatar") %>
+                  <% end %>
+                <% end %>
+              </div>
+              <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: "nav-sign-out" %>
+            </div>
+          </div>
+      </div>
+    </nav>
+</header>

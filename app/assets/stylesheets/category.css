@@ -1,0 +1,124 @@
+.add_categories_div,
+.new_category_form {
+  height: 58vh;
+  overflow: auto;
+  margin-top: 10px;
+}
+
+.category-card {
+  width: 90%;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 25% 25% 30% 20%;
+  margin-top: 15px;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+
+.cat_img {
+  width: 90%;
+  margin: auto;
+}
+
+.avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.category-image {
+  margin-left: 4px;
+}
+
+.total_and_delete_div {
+  display: flex;
+  flex-direction: column;
+}
+
+.category_name {
+  text-decoration: none;
+  font-size: 18px;
+  color: #434b54;
+}
+
+.cat_and_total {
+  display: flex;
+  width: 100%;
+  gap: 25%;
+}
+
+.add_category_btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  border: 0;
+  background-color: #5fb523;
+  width: 320px;
+  margin: auto;
+  color: white;
+  font-size: 18px;
+}
+
+.category_delete_botton {
+  align-self: center;
+  margin-top: 15px;
+  background-color: #3778c2;
+  border: 0;
+  color: white;
+  padding: 3px 5px;
+}
+
+/* new action */
+
+.category-transaction {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: rgb(238, 253, 255);
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.category-and-total-amount {
+  display: flex;
+}
+
+.new_category_form {
+  margin: auto;
+}
+
+.new_action_cat_ribbon {
+  text-align: center;
+}
+
+.save_category_btn {
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  border: 0;
+  background-color: #5fb523;
+  width: 50%;
+  margin: auto;
+  color: white;
+  font-size: 18px;
+  align-self: center;
+}
+
+.new-category {
+  font-size: 15px;
+}
+
+.add-form div {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.add-form div .save_category_btn {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 30px;
+}

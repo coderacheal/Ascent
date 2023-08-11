@@ -1,0 +1,36 @@
+header {
+  background-color: #3778c2;
+  height: 65px;
+  margin-top: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15px;
+}
+
+.back-sign {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.name-image-div {
+  display: flex;
+}
+
+.nav-sign-out {
+  display: flex;
+  align-self: flex-end;
+  margin-left: 70px;
+  border: 0;
+  color: white;
+  width: 55%;
+  background-color: transparent;
+}
+
+.username {
+  margin-bottom: 0;
+}

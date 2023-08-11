@@ -1,0 +1,26 @@
+<main>
+  <%= render partial: 'shared/pre_login' %>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <div class='login_container'>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: "field" %>
+
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class: "field" %>
+      
+      <div>
+        <%= link_to "Forgot your password?", new_password_path(resource_name), class: 'forgot' %><br />
+      </div>
+
+      <%= f.submit "Log in", class: 'login_button' %>
+
+      
+    </div>
+    
+  <% end %>
+
+
+</main>
+
