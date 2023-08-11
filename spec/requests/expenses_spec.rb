@@ -8,8 +8,8 @@ RSpec.describe 'Expenses', type: :request do
     sign_in @user
 
     @category_one = Category.create(name: 'Groceries', user_id: @user.id)
-    
-     # Attach an image to the @category_one instance
+
+    # Attach an image to the @category_one instance
     image_path = Rails.root.join('spec', 'fixtures', 'files', 'profile.png')
     @category_one.image.attach(io: File.open(image_path), filename: 'profile.png', content_type: 'image/png')
 

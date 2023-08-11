@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Category Feature', type: :feature do
-
   before(:each) do
     @user_one = User.create!(name: 'Racheal', email: 'racheal@gmail.com', password: '123456',
                              password_confirmation: '123456')
@@ -16,11 +15,11 @@ RSpec.describe 'Category Feature', type: :feature do
 
     @category_two = Category.create(name: 'Investment', user_id: @user_one.id)
 
-   
+
     # Attach an image to the @category_one instance
     image_path = Rails.root.join('spec', 'fixtures', 'files', 'profile.png')
     @category_one.image.attach(io: File.open(image_path), filename: 'profile.png', content_type: 'image/png')
-  
+
     @expense_one = Expense.create(name: 'Olive Oil', amount: 25, author_id: @user_one.id)
 
     # Associate the Expense with the Category
@@ -31,7 +30,6 @@ RSpec.describe 'Category Feature', type: :feature do
     it 'shows all categories' do
       visit categories_path
       expect(page).to have_content('Add category')
-     
     end
   end
 
@@ -50,7 +48,6 @@ RSpec.describe 'Category Feature', type: :feature do
       visit categories_path
       expect(page).to have_content('Total $0.00')
     end
-
   end
 
   describe 'New Category Action' do
