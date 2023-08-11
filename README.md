@@ -173,7 +173,7 @@ Example command:
 To run tests, run the following command:
 
 ```sh
-  rspec
+  bundle exec rspec
   
 ```
 

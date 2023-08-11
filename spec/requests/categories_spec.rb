@@ -1,7 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe 'Categories', type: :request do
-  let(:user) { create(:user) }
+  # let(:user) { create(:user) }
+
+  before :each do
+    @user = User.create(name: 'Racheal', image: 'a photo of me', email: 'crossogh@gmail.com', password: '123456')
+  end
 
   describe 'GET /categories' do
     it 'returns http success' do
