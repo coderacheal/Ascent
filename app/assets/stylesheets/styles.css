@@ -84,4 +84,9 @@ main {
   main {
     width: 100%;
   }
+
+  .add_category_btn {
+    width: 100%;
+  }
+  
 }

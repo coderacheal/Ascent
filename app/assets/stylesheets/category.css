@@ -55,10 +55,11 @@
   padding: 15px;
   border: 0;
   background-color: #5fb523;
-  width: 100%;
+  width: 320px;
   margin: auto;
   color: white;
   font-size: 18px;
+  
 }
 
 .category_delete_botton {
