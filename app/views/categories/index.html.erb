@@ -3,15 +3,14 @@
   <div class='add_categories_div'>
     <% @category_total_amounts.each do |category, total_amount| %>
       <div class='category-card'>
-        <div class='total_and_delete_div'>
-          <div class='cat_and_total'>
+        <%# <div class='total_and_delete_div'> %>
+          <%# <div class='cat_and_total'> %>
+            <%= image_tag category.image, class: 'category-image' if category.image.attached? %>
             <p ><%= link_to category.name, category_expenses_path(category_id: category.id), class: 'category_name' %> </p>
             <p>Total <%= number_to_currency(total_amount) %></p>
-          </div>
-          <div class='category_delete_botton_div'>
             <%= button_to 'Delete', category_path(category), method: :delete, class: 'category_delete_botton' %>
-          </div>
-        </div>
+          <%# </div> %>
+        <%# </div> %>
       </div>
     <% end %>
   </div>

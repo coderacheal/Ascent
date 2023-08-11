@@ -10,8 +10,10 @@
   background-color: rgb(255, 255, 255);
   margin: auto;
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 25% 25% 30% 20%;
   margin-top: 15px;
+  padding: 15px 0;
+  border-radius: 10px;
 }
 
 .cat_img {
@@ -60,17 +62,12 @@
 }
 
 .category_delete_botton {
-  display: flex;
-  justify-self: flex-end;
+  align-self: center;
+  margin-top: 15px;
   background-color: #3778c2;
   border: 0;
   color: white;
   padding: 3px 5px;
-}
-
-.category_delete_botton_div {
-  justify-content: flex-end;
-  margin-left: 60%;
 }
 
 /* new action */
@@ -90,7 +87,6 @@
 }
 
 .new_category_form {
-  /* width: 90; */
   margin: auto;
 }
 
